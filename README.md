@@ -13,7 +13,7 @@ A multithreaded tcp-based echo server implemented in C++
   6. Now run the client using the command: ./c.out 127.0.0.1 8000
 
 # Some Clarifications:
-1. In step 2, the argument 8000 is the port number on which the server will listen. You can pass any valid port number on which you want the server to listen. The server binds to all available ip address of host machine (INADDR_ANY).
+1. In step 2, the argument 8000 is the port number on which the server will listen. You can pass any valid port number on which you want the server to listen. The server binds to all available ip addresses (INADDR_ANY).
 
 2. The command in step 6 has two command line arguments. The first argument (127.0.0.1) is the ip address of the server. If the server is on another machine, then you can pass the ip address of that machine. The second argument is the port number on which the server is listening.
 
