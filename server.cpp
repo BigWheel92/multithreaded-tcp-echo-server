@@ -27,7 +27,6 @@ void* serverThread(void* param)
      if (bytes_recv==-1)
      {
         perror("recv");
-        close(clientData->fd);
         break;
      }
  
@@ -37,13 +36,13 @@ void* serverThread(void* param)
      if (bytes_sent==-1)
      {
         perror("send");
-        close(clientData->fd);
         break;
      }
 
    }
   
   cout<<"Client ("<<inet_ntoa(clientData->client.sin_addr)<<") disconnected."<<endl<<endl;
+  close(clientData->fd);
   delete clientData;
   pthread_exit(NULL);
 
