@@ -86,8 +86,9 @@ int main(int argc, char *argv[])
 
  while (true)
  {
-    ThreadData *newClient=new ThreadData;
-   
+   ThreadData *newClient=new ThreadData;
+   len=sizeof(sockaddr_in);
+	 
    if( (newClient->fd=accept(sock_fd, (sockaddr*) &(newClient->client), (socklen_t*) &len) )==-1)
    {
 	perror("accept:");
