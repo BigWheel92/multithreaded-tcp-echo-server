@@ -34,6 +34,7 @@ int main(int argc, char *argv[])
  if (connect(sock_fd, (sockaddr*) &remote_server, sizeof(sockaddr))==-1)
  {
    perror("connect: ");
+   close(sock_fd);
    exit(-1);
  }
 
