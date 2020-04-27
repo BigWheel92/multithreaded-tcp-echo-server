@@ -56,8 +56,8 @@ int main(int argc, char *argv[])
      return 1;
   }
   
-  int sock_fd, client_fd;
-  sockaddr_in server, client;
+  int sock_fd;
+  sockaddr_in server;
 
   if ((sock_fd= socket(AF_INET, SOCK_STREAM, 0))==-1)
   {
