@@ -3,7 +3,7 @@ A multithreaded tcp-based echo server implemented in C++
 
 # How To run:
 # First you need to compile and run server.cpp:
-  1. Open a terminal in linux OS. 
+  1. Open a terminal in a Linux-based OS. 
   2. compile server.cpp file using the command: g++ server.cpp -lpthread -o s.out
   3. now run the server using the command:  ./s.out 8000
 
