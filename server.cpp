@@ -6,6 +6,7 @@
 #include <string.h>
 #include <arpa/inet.h>
 #include <pthread.h>
+#include <unistd.h>
 #include <iostream>
 using namespace std;
 
