@@ -11,7 +11,7 @@ using namespace std;
 
 int main(int argc, char *argv[])
 {
-  if (argc<2)
+  if (argc< 3)
   {
      cout<<"Please pass the ip address of the server as well as the port on which the server is listening."<<endl;
      return 1;
