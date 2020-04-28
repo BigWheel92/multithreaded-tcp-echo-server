@@ -18,7 +18,7 @@ struct ThreadData
 
 void* serverThread(void* param)
 {
-   ThreadData *clientData= ( (ThreadData*) param);
+   ThreadData *clientData= ((ThreadData*) param);
 
    char clientInput[100]="";
    
@@ -75,8 +75,8 @@ int main(int argc, char *argv[])
  
  if (bind(sock_fd, (sockaddr*) &server, len)==-1)
  {
-  perror("bind:");
-  exit(-1);
+      perror("bind:");
+      exit(-1);
  }
 
  if (listen(sock_fd, 10)==-1)
@@ -90,7 +90,7 @@ int main(int argc, char *argv[])
    ThreadData *newClient=new ThreadData;
    len=sizeof(sockaddr_in);
 	 
-   if( (newClient->fd=accept(sock_fd, (sockaddr*) &(newClient->client), (socklen_t*) &len) )==-1)
+   if ((newClient->fd=accept(sock_fd, (sockaddr*) &(newClient->client), (socklen_t*) &len) )==-1)
    {
 	perror("accept:");
 	exit(-1);
