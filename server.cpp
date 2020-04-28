@@ -73,7 +73,7 @@ int main(int argc, char *argv[])
 
  int len=sizeof(sockaddr_in);
  
- if ((bind(sock_fd, (sockaddr*) &server, len))==-1)
+ if (bind(sock_fd, (sockaddr*) &server, len)==-1)
  {
   perror("bind:");
   exit(-1);
@@ -97,7 +97,7 @@ int main(int argc, char *argv[])
    }
    
   pthread_t tid=0;
-  if ( (pthread_create(&tid, NULL, &serverThread, newClient))==-1)
+  if (pthread_create(&tid, NULL, &serverThread, newClient) ==-1)
   {
     perror("thread");
     continue;
